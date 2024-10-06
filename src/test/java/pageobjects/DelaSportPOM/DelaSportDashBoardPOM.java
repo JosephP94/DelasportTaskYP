@@ -67,10 +67,11 @@ public class DelaSportDashBoardPOM extends BasePageDelaSportTask {
      */
     private void closeModalIfPresent() {
         try {
-            WebElement closeButton = waitUntilClickable(modalClosePopUp);
-            closeButton.click();
-        } catch (NoSuchElementException e) {
+            waitUntilClickable(modalClosePopUp).click();
+        } catch (Exception e) {
             // Modal close button not found; no action required
+            System.out.println("The pop-up was not displayed.");
+            System.out.println("Stack trace:"+e);
         }
     }
 
