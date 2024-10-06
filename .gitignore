@@ -1,7 +1,11 @@
+# Ignore target directories
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+
+# Ignore screenshots directory
+/screenshots/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
