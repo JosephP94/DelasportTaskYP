@@ -5,9 +5,7 @@ The goal of the solution was to create an automated test framework using Seleniu
 **Task Breakdown**
 Here’s what I had to do:
 1. Navigate to https://luckybandit.club.test-delasport.com/en/sports.
-2. Log in using these credentials:
-- Username: tu_yosif
-- Password: Pass112#
+2. Log in using the provided credentials.
 3. Close any modal pop-ups that show up after logging in.
 4. Check if the balance in the header matches the response from the getMemberBalance request.
 
