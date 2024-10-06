@@ -3,19 +3,19 @@ package models;
 import java.util.Map;
 
 /**
- * Represents the response from the dashboard API.
+ * Represents the response from the dashboard endpoint getMemberBalance().
  */
 public class DashboardResponse {
 
     private String status;
-    private Map<String, DataItem> data; // Each key (1, 2, 3, etc.) maps to a DataItem
+    private Map<String, DataItem> data;
 
     // Getters and Setters
 
     /**
-     * Gets the status of the dashboard response.
+     * Gets the status of the dashboard response property
      *
-     * @return the status as a String
+     * @return the status as a readable text
      */
     public String getStatus() {
         return status;

@@ -1,28 +1,14 @@
 package requests;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.net.*;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-
 /**
  * Class for handling login requests to the platform.
  */
-public class LoginRequests {
-
-    private static final String COOKIE = "glc=en; mfl=1; imd=0; sv=european; SESS=7ge4kk3av944cog930p2rt5qi73rm99to5mmbgvil60tgkkl21i9rfpun6d3v1i0mjtccu; CSRF=f7cfe4ced6a2de19f4108f667e3a4e6d958eed54c9c0dab01fe49d69918ff900; cd=16453d6e26";
-    private static final String REQUEST_METHOD = "POST";
-    private static final String CONTENT_TYPE = "application/x-www-form-urlencoded";
-
+public class LoginRequests extends BaseRequest {
     /**
      * Sends a login request to the specified endpoint with the provided username and password.
      *
@@ -80,38 +66,4 @@ public class LoginRequests {
         }
         return cookieHeader;
     }
-
-    /**
-     * Writes the POST data to the connection's output stream.
-     *
-     * @param connection the HttpURLConnection object
-     * @param postData  the POST data to be sent
-     * @throws IOException if an I/O error occurs
-     */
-    private void writePostData(HttpURLConnection connection, String postData) throws IOException {
-        try (OutputStream os = connection.getOutputStream()) {
-            byte[] input = postData.getBytes("utf-8");
-            os.write(input, 0, input.length);
-        }
-    }
-
-    /**
-     * Reads the response from the server.
-     *
-     * @param connection the HttpURLConnection object
-     * @return the server response as a String
-     * @throws IOException if an I/O error occurs
-     */
-    private String readResponse(HttpURLConnection connection) throws IOException {
-        StringBuilder response = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream(), "utf-8"))) {
-            String responseLine;
-            while ((responseLine = br.readLine()) != null) {
-                response.append(responseLine.trim());
-            }
-        }
-        return response.toString();
-    }
-
-
 }
