@@ -147,7 +147,6 @@ public class SeleniumSetup {
     String os = System.getProperty("os.name").toLowerCase();
     String arch = System.getProperty("os.arch").toLowerCase();
     String binaryRoot = prop.getString("binaryRootFolder");
-
     String path;
     if (os.contains("windows")) {  // Use contains to handle all variations of "Windows"
       path = String.format("%s/windows/%s/%s/%s.exe", binaryRoot, driverName, arch.contains("64") ? "64bit" : "32bit", driverName + "driver");

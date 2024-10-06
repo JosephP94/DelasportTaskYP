@@ -18,9 +18,6 @@ public class DelaSportDashBoardPOM extends BasePageDelaSportTask {
     @FindBy(id = "mainContent")
     private WebElement mainContent;
 
-    @FindBy(xpath = "//div[@id='dropdownOddDisplayType']")
-    private WebElement oddType;
-
     @FindBy(xpath = "//span[contains(.,'Balance')]/..//span[contains(@class,'amount')]")
     private WebElement balanceField;
 
