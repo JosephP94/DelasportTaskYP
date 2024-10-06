@@ -7,9 +7,9 @@ public class DataItem {
 
     private String action;
     private Info info;
-
+    // Getters and Setters
     /**
-     * Gets the action associated with the data item.
+     * Gets the action from the response.
      *
      * @return the action as a String
      */
@@ -18,7 +18,7 @@ public class DataItem {
     }
 
     /**
-     * Sets the action associated with the data item.
+     * Sets the action property.
      *
      * @param action the action to set
      */
@@ -27,7 +27,7 @@ public class DataItem {
     }
 
     /**
-     * Gets the info associated with the data item.
+     * Gets the info from the response.
      *
      * @return the Info object
      */
@@ -36,7 +36,7 @@ public class DataItem {
     }
 
     /**
-     * Sets the info associated with the data item.
+     * Sets the info property.
      *
      * @param info the Info object to set
      */

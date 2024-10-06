@@ -3,7 +3,7 @@ package models;
 import java.util.List;
 
 /**
- * Represents information related to a specific credit type in the dashboard response.
+ * Represents the info object from getMemberBalance()
  */
 public class Info {
 
@@ -12,21 +12,21 @@ public class Info {
     private String amount;
     private String raw_amount;
     private int order;
-    private List<Object> offers; // Assumed to be a list of offers (empty in your JSON)
-    private int has_freespins_offer; // Not present for all objects
-    private int has_monetary_offer;  // Not present for all objects
+    private List<Object> offers;
+    private int has_freespins_offer;
+    private int has_monetary_offer;
 
     /**
-     * Gets the credit type associated with the info.
+     * Gets the credit type from the response
      *
-     * @return the credit type as a String
+     * @return the credit type as a readable text
      */
     public String getCreditType() {
         return creditType;
     }
 
     /**
-     * Sets the credit type associated with the info.
+     * Sets the credit type from the response.
      *
      * @param creditType the credit type to set
      */
@@ -35,7 +35,7 @@ public class Info {
     }
 
     /**
-     * Gets the key associated with the info.
+     * Gets the key from the info object.
      *
      * @return the key as a String
      */
@@ -44,7 +44,7 @@ public class Info {
     }
 
     /**
-     * Sets the key associated with the info.
+     * Sets the key associated with the info object.
      *
      * @param key the key to set
      */
@@ -53,7 +53,7 @@ public class Info {
     }
 
     /**
-     * Gets the amount associated with the info.
+     * Gets the amount associated with the info object.
      *
      * @return the amount as a String
      */
@@ -62,7 +62,7 @@ public class Info {
     }
 
     /**
-     * Sets the amount associated with the info.
+     * Sets the amount associated with the info object.
      *
      * @param amount the amount to set
      */
@@ -71,16 +71,16 @@ public class Info {
     }
 
     /**
-     * Gets the raw amount associated with the info.
+     * Gets the raw amount associated with the info object.
      *
-     * @return the raw amount as a String
+     * @return the raw amount as a readable text
      */
     public String getRawAmount() {
         return raw_amount;
     }
 
     /**
-     * Sets the raw amount associated with the info.
+     * Sets the raw amount associated with the info object.
      *
      * @param rawAmount the raw amount to set
      */
@@ -89,7 +89,7 @@ public class Info {
     }
 
     /**
-     * Gets the order associated with the info.
+     * Gets the order associated with the info object.
      *
      * @return the order as an int
      */
@@ -98,7 +98,7 @@ public class Info {
     }
 
     /**
-     * Sets the order associated with the info.
+     * Sets the order associated with the info object.
      *
      * @param order the order to set
      */
@@ -107,7 +107,7 @@ public class Info {
     }
 
     /**
-     * Gets the offers associated with the info.
+     * Gets the offers associated with the info object.
      *
      * @return a List of offers
      */
@@ -116,7 +116,7 @@ public class Info {
     }
 
     /**
-     * Sets the offers associated with the info.
+     * Sets the offers associated with the info object.
      *
      * @param offers the List of offers to set
      */
@@ -125,7 +125,7 @@ public class Info {
     }
 
     /**
-     * Gets the number of free spins offers associated with the info.
+     * Gets the number of free spins offers associated with the info object.
      *
      * @return the number of free spins offers as an int
      */
@@ -134,7 +134,7 @@ public class Info {
     }
 
     /**
-     * Sets the number of free spins offers associated with the info.
+     * Sets the number of free spins offers associated with the info object.
      *
      * @param hasFreespinsOffer the number of free spins offers to set
      */
@@ -143,7 +143,7 @@ public class Info {
     }
 
     /**
-     * Gets the number of monetary offers associated with the info.
+     * Gets the number of monetary offers associated with the info object.
      *
      * @return the number of monetary offers as an int
      */
@@ -152,7 +152,7 @@ public class Info {
     }
 
     /**
-     * Sets the number of monetary offers associated with the info.
+     * Sets the number of monetary offers associated with the info object.
      *
      * @param hasMonetaryOffer the number of monetary offers to set
      */
