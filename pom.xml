@@ -12,7 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <standalone.binary.root.folder>${project.basedir}\selenium_standalone_binaries</standalone.binary.root.folder>
-    	<browser>firefox</browser>
+    	<browser>chrome</browser>
     	<threads>1</threads>
     	<baseURL>https://luckybandit.club.test-delasport.com/</baseURL>
         <sportsPlatformURL>en/sports</sportsPlatformURL>

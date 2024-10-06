@@ -1,4 +1,5 @@
 package pageobjects.pom;
+import extension.MainExtensions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,7 +33,9 @@ public class Login extends BasePage {
      * Clicks on the Log In button from the header
      */
     public void goToLoginPage() {
+        MainExtensions.waitForJSToLoad(driver);
         waitUntilClickable(loginButton).click();
+        MainExtensions.waitForJSToLoad(driver);
     }
 
     /**
@@ -49,6 +52,7 @@ public class Login extends BasePage {
      * @param password the user's password
      */
     public void populateLoginDetails(String email, String password) {
+        MainExtensions.waitForJSToLoad(driver);
         waitUntilVisible(userNameField).sendKeys(email);
         waitUntilVisible(passwordField).sendKeys(password);
     }

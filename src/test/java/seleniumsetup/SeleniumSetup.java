@@ -146,10 +146,6 @@ public class SeleniumSetup extends BaseSetup{
                         arch.contains("64") ? "64bit" : "32bit",
                         File.separator,
                         driverName);
-                System.out.println("The path is "+path);
-                System.out.println("The driver name is "+driverName);
-                System.out.println("The browser name is "+browserName);
-
             } else if (os.contains("mac")) {
                 path = String.format("%s/osx/%s/%s", binaryRoot, driverName, driverName);
             } else if (os.contains("linux")) {
